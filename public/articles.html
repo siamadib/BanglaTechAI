@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সব আর্টিকেল - BanglaTechAI</title>
+    <meta name="description" content="BanglaTechAI এর সব আর্টিকেল দেখুন">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Bangla<span>TechAI</span></a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="/articles">আর্টিকেল</a></li>
+                    <li><a href="/ai-tools">AI টুলস</a></li>
+                    <li><a href="/tech-guides">টিউটোরিয়াল</a></li>
+                    <li><a href="/comparisons">তুলনা</a></li>
+                    <li><a href="/contact">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="container" style="padding: 40px 20px;">
+        <h1>সব আর্টিকেল</h1>
+        <div class="search-box" style="margin-top: 20px;">
+            <input type="text" id="search-input" placeholder="আর্টিকেল খুঁজুন...">
+            <button onclick="searchArticles()">খুঁজুন</button>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="container">
+        <div style="margin-bottom: 20px;">
+            <label for="category-filter">ক্যাটাগরি:</label>
+            <select id="category-filter" onchange="filterByCategory()" style="padding: 8px; margin-left: 10px;">
+                <option value="">সব ক্যাটাগরি</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="container">
+        <div class="articles-grid" id="articles-container">
+            <div class="loading">লোড হচ্ছে...</div>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="container" style="text-align: center; margin: 40px 0;">
+        <div id="pagination"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BanglaTechAI</h3>
+                <p>বাংলায় প্রযুক্তি ও AI টুলসের সব তথ্য এক জায়গায়।</p>
+            </div>
+            <div class="footer-section">
+                <h3>কুইক লিংক</h3>
+                <ul>
+                    <li><a href="/about">আমাদের সম্পর্কে</a></li>
+                    <li><a href="/contact">যোগাযোগ</a></li>
+                    <li><a href="/privacy-policy">গোপনীয়তা নীতি</a></li>
+                    <li><a href="/terms">শর্তাবলী</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BanglaTechAI. সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <script src="/js/articles.js"></script>
+</body>
+</html>

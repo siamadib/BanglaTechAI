@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - BanglaTechAI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Bangla<span>TechAI</span></a>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 60px 20px; max-width: 500px;">
+        <h1 style="color: var(--primary-color); margin-bottom: 30px; text-align: center;">Admin Login</h1>
+
+        <form id="login-form" onsubmit="handleLogin(event)">
+            <div style="margin-bottom: 20px;">
+                <label for="username" style="display: block; margin-bottom: 8px; font-weight: 600;">Username</label>
+                <input type="text" id="username" name="username" required style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="password" style="display: block; margin-bottom: 8px; font-weight: 600;">Password</label>
+                <input type="password" id="password" name="password" required style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px;">
+            </div>
+
+            <button type="submit" style="width: 100%; padding: 15px; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">Login</button>
+        </form>
+
+        <div id="login-message" style="text-align: center; margin-top: 20px; display: none;"></div>
+
+        <div style="margin-top: 30px; padding: 20px; background: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--warning-color);">
+            <p style="color: var(--text-color); font-size: 0.9rem;">
+                <strong>Note:</strong> Admin authentication will be implemented in Phase 3. Currently, this is a placeholder.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const messageDiv = document.getElementById('login-message');
+            messageDiv.style.display = 'block';
+            messageDiv.textContent = 'Admin authentication will be implemented in Phase 3.';
+            messageDiv.style.color = 'var(--warning-color)';
+        }
+    </script>
+</body>
+</html>

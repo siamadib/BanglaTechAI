@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanglaTechAI - বাংলা টেক ও AI টুলস</title>
+    <meta name="description" content="BanglaTechAI - বাংলায় প্রযুক্তি, AI টুলস, টিউটোরিয়াল এবং সফটওয়্যার গাইড">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Bangla<span>TechAI</span></a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="/articles">আর্টিকেল</a></li>
+                    <li><a href="/ai-tools">AI টুলস</a></li>
+                    <li><a href="/tech-guides">টিউটোরিয়াল</a></li>
+                    <li><a href="/comparisons">তুলনা</a></li>
+                    <li><a href="/contact">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>বাংলায় প্রযুক্তি ও AI টুলসের সব তথ্য</h1>
+            <p>ফ্রি AI টুলস, টেকনোলজি টিউটোরিয়াল, সফটওয়্যার গাইড এবং আরও অনেক কিছু</p>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="আর্টিকেল খুঁজুন...">
+                <button onclick="searchArticles()">খুঁজুন</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Placeholder -->
+    <div class="container">
+        <div class="ad-placeholder">
+            <p>বিজ্ঞাপন স্থান (Google AdSense)</p>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <section class="container">
+        <h2 class="section-title">জনপ্রিয় ক্যাটাগরি</h2>
+        <div class="categories-grid" id="categories-container">
+            <div class="loading">লোড হচ্ছে...</div>
+        </div>
+    </section>
+
+    <!-- Trending Articles -->
+    <section class="container">
+        <h2 class="section-title">ট্রেন্ডিং আর্টিকেল</h2>
+        <div class="articles-grid" id="trending-container">
+            <div class="loading">লোড হচ্ছে...</div>
+        </div>
+    </section>
+
+    <!-- Advertisement Placeholder -->
+    <div class="container">
+        <div class="ad-placeholder">
+            <p>বিজ্ঞাপন স্থান (Google AdSense)</p>
+        </div>
+    </div>
+
+    <!-- Latest Articles -->
+    <section class="container">
+        <h2 class="section-title">সর্বশেষ আর্টিকেল</h2>
+        <div class="articles-grid" id="latest-container">
+            <div class="loading">লোড হচ্ছে...</div>
+        </div>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="/articles" class="newsletter-form button">সব আর্টিকেল দেখুন</a>
+        </div>
+    </section>
+
+    <!-- AI Tools -->
+    <section class="container">
+        <h2 class="section-title">ফ্রি AI টুলস</h2>
+        <div class="ai-tools-grid" id="ai-tools-container">
+            <div class="loading">লোড হচ্ছে...</div>
+        </div>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="/ai-tools" class="newsletter-form button">সব AI টুলস দেখুন</a>
+        </div>
+    </section>
+
+    <!-- Advertisement Placeholder -->
+    <div class="container">
+        <div class="ad-placeholder">
+            <p>বিজ্ঞাপন স্থান (Google AdSense)</p>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>নিউজলেটার সাবস্ক্রাইব করুন</h2>
+            <p>নতুন আর্টিকেল এবং আপডেট পেতে ইমেইল দিন</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" id="newsletter-email" placeholder="আপনার ইমেইল" required>
+                <button type="submit">সাবস্ক্রাইব</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BanglaTechAI</h3>
+                <p>বাংলায় প্রযুক্তি ও AI টুলসের সব তথ্য এক জায়গায়।</p>
+            </div>
+            <div class="footer-section">
+                <h3>কুইক লিংক</h3>
+                <ul>
+                    <li><a href="/about">আমাদের সম্পর্কে</a></li>
+                    <li><a href="/contact">যোগাযোগ</a></li>
+                    <li><a href="/privacy-policy">গোপনীয়তা নীতি</a></li>
+                    <li><a href="/terms">শর্তাবলী</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ক্যাটাগরি</h3>
+                <ul>
+                    <li><a href="/category?slug=ai-tools">AI টুলস</a></li>
+                    <li><a href="/category?slug=technology">টেকনোলজি</a></li>
+                    <li><a href="/category?slug=tutorials">টিউটোরিয়াল</a></li>
+                    <li><a href="/category?slug=software">সফটওয়্যার</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>সোশ্যাল মিডিয়া</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BanglaTechAI. সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

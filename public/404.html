@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - পেজ পাওয়া যায়নি - BanglaTechAI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Bangla<span>TechAI</span></a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="/articles">আর্টিকেল</a></li>
+                    <li><a href="/ai-tools">AI টুলস</a></li>
+                    <li><a href="/tech-guides">টিউটোরিয়াল</a></li>
+                    <li><a href="/comparisons">তুলনা</a></li>
+                    <li><a href="/contact">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 100px 20px; text-align: center;">
+        <h1 style="font-size: 6rem; color: var(--primary-color); margin-bottom: 20px;">404</h1>
+        <h2 style="color: var(--text-color); margin-bottom: 20px;">পেজ পাওয়া যায়নি</h2>
+        <p style="color: var(--text-light); margin-bottom: 30px; font-size: 1.2rem;">
+            দুঃখিত, আপনি যে পেজটি খুঁজছেন তা পাওয়া যায়নি।
+        </p>
+        <a href="/" style="display: inline-block; padding: 15px 30px; background: var(--primary-color); color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">হোমে ফিরে যান</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BanglaTechAI</h3>
+                <p>&copy; 2024 BanglaTechAI. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

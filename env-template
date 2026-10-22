@@ -1,0 +1,15 @@
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# Database Configuration
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=banglatechai
+
+# Session Configuration
+SESSION_SECRET=your_random_secret_string_change_this_in_production
+
+# Admin Configuration (Initial admin will be created using setup script)
+# Do not commit actual credentials to version control

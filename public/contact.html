@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ - BanglaTechAI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Bangla<span>TechAI</span></a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="/articles">আর্টিকেল</a></li>
+                    <li><a href="/ai-tools">AI টুলস</a></li>
+                    <li><a href="/tech-guides">টিউটোরিয়াল</a></li>
+                    <li><a href="/comparisons">তুলনা</a></li>
+                    <li><a href="/contact">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 40px 20px; max-width: 800px;">
+        <h1 style="color: var(--primary-color); margin-bottom: 30px;">যোগাযোগ করুন</h1>
+
+        <form id="contact-form" style="max-width: 600px; margin: 0 auto;" onsubmit="submitContact(event)">
+            <div style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600;">নাম *</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="email" style="display: block; margin-bottom: 8px; font-weight: 600;">ইমেইল *</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="subject" style="display: block; margin-bottom: 8px; font-weight: 600;">বিষয়</label>
+                <input type="text" id="subject" name="subject" style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="message" style="display: block; margin-bottom: 8px; font-weight: 600;">বার্তা *</label>
+                <textarea id="message" name="message" required rows="6" style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 16px; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" style="width: 100%; padding: 15px; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s ease;">বার্তা পাঠান</button>
+        </form>
+
+        <div id="form-message" style="text-align: center; margin-top: 20px; display: none;"></div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BanglaTechAI</h3>
+                <p>&copy; 2024 BanglaTechAI. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        async function submitContact(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                subject: form.subject.value,
+                message: form.message.value
+            };
+
+            const messageDiv = document.getElementById('form-message');
+            messageDiv.style.display = 'block';
+            messageDiv.textContent = 'পাঠানো হচ্ছে...';
+            messageDiv.style.color = 'var(--text-light)';
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    messageDiv.textContent = 'সফলভাবে বার্তা পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।';
+                    messageDiv.style.color = 'var(--success-color)';
+                    form.reset();
+                } else {
+                    messageDiv.textContent = data.error || 'বার্তা পাঠাতে সমস্যা হয়েছে। দয়া করে আবার চেষ্টা করুন।';
+                    messageDiv.style.color = 'var(--error-color)';
+                }
+            } catch (error) {
+                console.error('Error submitting contact form:', error);
+                messageDiv.textContent = 'বার্তা পাঠাতে সমস্যা হয়েছে। দয়া করে আবার চেষ্টা করুন।';
+                messageDiv.style.color = 'var(--error-color)';
+            }
+        }
+    </script>
+</body>
+</html>

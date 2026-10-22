@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দাবিত্যাগ - BanglaTechAI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Bangla<span>TechAI</span></a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="/">হোম</a></li>
+                    <li><a href="/articles">আর্টিকেল</a></li>
+                    <li><a href="/ai-tools">AI টুলস</a></li>
+                    <li><a href="/tech-guides">টিউটোরিয়াল</a></li>
+                    <li><a href="/comparisons">তুলনা</a></li>
+                    <li><a href="/contact">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 40px 20px; max-width: 800px;">
+        <h1 style="color: var(--primary-color); margin-bottom: 30px;">দাবিত্যাগ</h1>
+
+        <div style="line-height: 1.8; color: var(--text-color);">
+            <p style="margin-bottom: 20px;">
+                BanglaTechAI ওয়েবসাইটে প্রদত্ত তথ্য শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে।
+            </p>
+
+            <h2 style="color: var(--primary-color); margin: 30px 0 15px;">তথ্যের নির্ভুলতা</h2>
+            <p style="margin-bottom: 20px;">
+                আমরা সঠিক এবং আপডেটেড তথ্য প্রদানের চেষ্টা করি, তবে আমরা কন্টেন্টের সম্পূর্ণ নির্ভুলতার নিশ্চয়তা দিই না। প্রযুক্তি দ্রুত পরিবর্তনশীল, তাই কিছু তথ্য পুরানো হতে পারে।
+            </p>
+
+            <h2 style="color: var(--primary-color); margin: 30px 0 15px;">বাহ্যিক লিংক</h2>
+            <p style="margin-bottom: 20px;">
+                আমাদের ওয়েবসাইটে বাহ্যিক লিংক থাকতে পারে। আমরা এই লিংকগুলোর কন্টেন্টের জন্য দায়ী নই।
+            </p>
+
+            <h2 style="color: var(--primary-color); margin: 30px 0 15px;">AI টুলস</h2>
+            <p style="margin-bottom: 20px;">
+                আমরা যে AI টুলসগুলো সুপারিশ করি, সেগুলোর ব্যবহার আপনার নিজের দায়িত্ব। আমরা কোন টুলের কার্যকারিতা বা নিরাপত্তার নিশ্চয়তা দিই না।
+            </p>
+
+            <h2 style="color: var(--primary-color); margin: 30px 0 15px;">পেশাদার পরামর্শ</h2>
+            <p style="margin-bottom: 20px;">
+                আমাদের কন্টেন্ট পেশাদার পরামর্শের বিকল্প নয়। গুরুত্বপূর্ণ সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট বিশেষজ্ঞের পরামর্শ নিন।
+            </p>
+
+            <h2 style="color: var(--primary-color); margin: 30px 0 15px;">অ্যাফিলিয়েট লিংক</h2>
+            <p style="margin-bottom: 20px;">
+                আমাদের ওয়েবসাইটে অ্যাফিলিয়েট লিংক থাকতে পারে। আপনি এই লিংকের মাধ্যমে কিনলে আমরা কমিশন পেতে পারি, যা আমাদের ওয়েবসাইট চালানোতে সাহায্য করে। এটি আপনার ক্রয় মূল্যে কোন প্রভাব ফেলে না।
+            </p>
+
+            <h2 style="color: var(--primary-color); margin: 30px 0 15px;">যোগাযোগ</h2>
+            <p>
+                কোন প্রশ্ন থাকলে <a href="/contact" style="color: var(--accent-color);">আমাদের যোগাযোগ করুন</a>।
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BanglaTechAI</h3>
+                <p>&copy; 2024 BanglaTechAI. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
